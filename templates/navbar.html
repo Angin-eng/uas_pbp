@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAVOOD</title>
+</head>
+<style>
+    /* Gaya Umum */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #ff6f61;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header h2 {
+    margin: 10px 0 0;
+    font-weight: 400;
+    font-size: 1.2em;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Kotak Pencarian */
+.search-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.search-box input {
+    width: 60%;
+    max-width: 400px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1em;
+}
+
+.search-box button {
+    margin-left: 10px;
+    padding: 10px 15px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-box button:hover {
+    background-color: #e65a50;
+}
+
+/* Resep */
+#recipes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.recipe {
+    background: white;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+}
+
+.recipe img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.recipe h2 {
+    color: #ff6f61;
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.recipe h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.recipe ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+    text-align: left;
+}
+
+.recipe ul li {
+    margin: 5px 0;
+}
+
+.recipe p {
+    text-align: left;
+    font-size: 0.9em;
+    line-height: 1.5;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px 10px;
+    background-color: #333;
+    color: white;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+</style>
+<body>
+    <header>
+        <h1>Favood</h1>
+        <h2>Resep Makanan Simpel</h2>
+        <nav>
+            <a href="#search">Cari Resep</a> |
+            <a href="#recipes">Resep Populer</a> |
+            <a href="#about">Tentang Kami</a>
+        </nav>
+    </header>
+
+    <div class="search-box" id="search">
+        <input type="text" placeholder="Search Your Favorite Recipe">
+        <button>Cari</button>
+    </div>
+
+    <section id="recipes">
+        <div class="recipe">
+            <img src="ayamsuwir.jpeg" alt="Ayam Suwir Sambal Matah">
+            <h2>Ayam Suwir Sambal Matah</h2>
+            <h3>Bahan:</h3>
+            <ul>
+                <li>400gr dada ayam</li>
+                <li>6 siung bawang merah</li>
+                <li>3 siung bawang putih</li>
+                <li>15 cabai rawit merah</li>
+                <li>1 batang serai</li>
+                <li>5 lembar daun jeruk</li>
+                <li>1/2 Sdt terasi</li>
+                <li>Gula</li>
+                <li>Garam</li>
+            </ul>
+            <h3>Cara membuat:</h3>
+            <p>1. Rebus ayam. Suwir ayam dan campur dengan bahan sambal matah. Sajikan hangat.</p>
+            <p>2. Iris tipis bawang, cabai, serai, terasi, daun jeruk.</p>
+            <p>3. Tumis sebentar. Masukkan suwiran ayam. Tambahkan gula, garam, dan penyedap rasa.</p>
+            <p>4. Ayam suwir sambal matah siap dinikmati.</p>
+        </div>
+
+        <div class="recipe">
+            <img src="telurpenyet.jpg" alt="Telur Penyet">
+            <h2>Telur Penyet</h2>
+            <h3>Bahan:</h3>
+            <ul>
+                <li>3 butir telur</li>
+                <li>5 lembar daun bawang (iris halus)</li>
+                <li>Segenggam buncis (iris halus)</li>
+                <li>3 buah cabai rawit (iris)</li>
+                <li>3 butir bawang merah (iris)</li>
+                <li>Garam, kaldu bubuk, penyedap jamur, lada bubuk</li>
+            </ul>
+            <h3>Bahan lapisan:</h3>
+            <p>1 bungkus kecil tepung bumbu serbaguna</p>
+            <h3>Cara Membuat:</h3>
+            <p>1. Siapkan wadah masukkan telur dan bahan iris, wish dan aduk rata, masukkan bumbu.</p>
+            <p>2. Lalu goreng sampai matang. Angkat lalu potong-potong. Wadah bekas telur tadi masukkan tepung bumbu tambahkan air secukupnya sampai jadi seperti adonan bakwan.</p>
+            <p>3. Masukkan 1 persatu telur yang sudah digoreng dan dipotong tadi, lakukan sampai semua habis.</p>
+            <p>Lalu goreng kembali sebentar. Angkat dan siap disajikan (bersama lalapan dan sambal).</p>
+        </div>
+
+        <div class="recipe">
+            <img src="baksomercon.jpg" alt="Bakso Mercon">
+            <h2>Bakso Mercon</h2>
+            <h3>Bahan:</h3>
+            <ul>
+                <li>300 gram bakso</li>
+                <li>1 buah bawang bombai, cincang-cincang</li>
+                <li>4 sdm saus pedas</li>
+                <li>2 sdm kecap manis</li>
+                <li>2 sdm saus tiram</li>
+                <li>5 buah jeruk kunci, ambil airnya</li>
+                <li>Garam, gula secukupnya</li>
+                <li>200 ml air</li>
+                <li>2 sdm margarine</li>
+            </ul>
+            <h3>Bumbu halus:</h3>
+            <p>10 buah cabai rawit atau sesuai selera</p>
+            <p>4 siung bawang putih</p>
+            <h3>Cara membuat:</h3>
+            <p>1. Panaskan margarine lalu tumis bumbu halus dan bombai sampai harum, masukkan bakso, aduk-aduk</p>
+            <p>2. Masukkan saus pedas, saus tiram, kecap manis dan air jeruk kunci, aduk rata lalu tuang air</p>
+            <p>3. Masak sampai air menyusut masukkan gula dan sedikit garam, masak sampai air habis test rasa lalu angkat</p>
+            <p>4. Sajikan.</p>
+        </div>
+
+        <div class="recipe">
+            <img src="osengkacang.jpg" alt="Oseng Kacang Panjang Tempe Kecap Pedas">
+            <h2>Oseng Kacang Panjang Tempe Kecap Pedas</h2>
+            <h3>Bahan:</h3>
+            <ul>
+                <li>1 ikat kacang panjang (potong korek api)</li>
+                <li>1 papan tempe besar (potong dadu)</li>
+            </ul>
+            <h3>Bumbu halus:</h3>
+            <p>4 siung bawang merah</p>
+            <p>3 siung bawang putih</p>
+            <p>5 cabai rawit merah</p>
+            <p>10 cabai rawit hijau</p>
+            <p>Garam secukupnya</p>
+            <p>Gula pasir secukupnya</p>
+            <p>Kaldu bubuk secukupnya</p>
+            <p>Kecap manis secukupnya</p>
+            <p>Saori saus tiram secukupnya</p>
+            <h3>Cara membuat:</h3>
+            <p>1. Cuci bersih kacang panjang yang sudah dipotong korek api. Sisihkan</p>
+            <p>2. Goreng tempe yang sudah dipotong hingga keemasan. Tiriskan</p>
+            <p>3. Tumis bumbu halus hingga harum, tambahkan, garam, gula, kecap, saori, dan kaldu bubuk</p>
+            <p>4. Masukkan kacang panjang, aduk hingga tercampur rata dan tambahkan sedikit air</p>
+            <p>5. masukkan tempe, oseng-oseng sebentar. Koreksi rasa</p>
+            <p>6. Angkat dan sajikan.</p>
+        </div>
+
+        <div class="recipe">
+            <img src="nasigoreng.jpg" alt="Nasi Goreng Spesial">
+            <h2>Nasi Goreng Spesial</h2>
+            <h3>Bahan:</h3>
+            <ul>
+                <li>2 porsi nasi</li>
+                <li>50gr daging ayam potong dadu</li>
+                <li>2 butir telur</li>
+                <li>3 siung bawang merah, cincang kecil</li>
+                <li>2 bawang putih, cincang kecil</li>
+                <li>2 batang daun bawang, potong</li>
+                <li>1 buah cabai keriting</li>
+                <li>1 sdm kecap manis</li>
+                <li>2 sdm kecap ikan</li>
+                <li>1 sdm saus tiram</li>
+                <li>1/2 sdt kecap asin</li>
+                <li>1/2-1 sdm gula</li>
+                <li>1/2 sdt merica</li>
+                <li>1/2 sdt margarin</li>
+                <li>1 sdt kaldu jamur</li>
+                <li>Minyak untuk menumis</li>
+            </ul>
+            <h3>Cara membuat:</h3>
+            <p>1. Panaskan sedikit minyak di wajan, lalu tumis ayam hingga matang dan kemudian  sisihkan.</p>
+            <p>2. Di wajan yang sama, panaskan sedikit minyak dan orak-arik telur sampai matang. Kemudian, masukkan semua bawang dan cabai. </p>
+            <p>3. Aduk dan tumis hingga matang.</p>
+            <p>4. Masukan nasi, aduk hingga rata.</p>
+            <p>5. Lalu, masukkan ayam suwir, dan semua bahan kecap, garam, merica, dan kaldu jamur, aduk kembali sampai rata.</p>
+            <p>6. Koreksi rasa. Jika sudah pas, angkat dan sajikan dengan lalapan timun atau selada.</p>
+        </div>
+
+        <div class="recipe">
+            <img src="tumisbuncis.jpg" alt="Tumis Buncis">
+            <h2>Tumis Buncis</h2>
+            <h3>Bahan:</h3>
+            <ul>
+                <li>200 gram buncis, potong-potong</li>
+                <li>2 siung bawang putih, cincang halus</li>
+                <li>1/2 bawang bombay, iris tipis</li>
+                <li>1 buah tomat, potong-potong</li>
+                <li>Garam dan merica secukupnya</li>
+                <li>Minyak goreng</li>
+            </ul>
+            <h3>Cara membuat:</h3>
+            <p>1. Panaskan sedikit minyak di wajan.</p>
+            <p>2. Tumis bawang putih dan bawang bombay hingga harum.</p>
+            <p>3. Masukkan buncis, aduk rata, dan masak hingga setengah matang.</p>
+            <p>4. Tambahkan tomat, garam, dan merica, aduk rata.</p>
+            <p>5. Masak hingga buncis matang. Sajikan panas.</p>
+        </div>
+
+        <div class="recipe">
+            <img src="ayamgoreng.jpg" alt="Ayam Goreng Ketumbar">
+            <h2>Ayam Goreng Ketumbar</h2>
+            <h3>Bahan:</h3>
+            <ul>
+                <li>1 kg daging ayam (bersihkan, lalu potong-potong)</li>
+                <li>4 cm jahe (memarkan)</li>
+                <li>minyak goreng secukupnya air secukupnya</li>
+            </ul>
+            <h3>Bumbu halus:</h3>
+            <p>5 cm kunyit</p>
+            <p>2 sdt ketumbar</p>
+            <p>6 siung bawang putih</p>
+            <p>2 sdm kaldu ayam</p>
+            <p>gula pasir secukupnya</p>
+            <p>garam secukupnya</p>
+            <h3>Cara membuat:</h3>
+            <p>1. Haluskan semua bahan bumbu halus menggunakan blender atau bisa diulek.</p>
+            <p>2. Panaskan minyak goreng, tumis bahan bumbu halus hingga harum. </p>
+            <p>3. Aduk-aduk terus sampai merata, lalu tuang sedikit air dan masak hingga air mendidih.</p>
+            <p>4. Masukkan satu per satu potongan daging ayam. Tutup dan ungkep daging ayam selama kurang lebih 20 menit. Jika sudah, angkat dan tiriskan.</p>
+            <p>5. Panaskan kembali minyak goreng yang banyak hingga mendidih, masukkan daging ayam yang sudah dibumbui dan goreng sampai berwarna kuning kecokelatan.</p>
+            <p>6. Angkat dan tiriskan. Ayam goreng bumbu ketumbar siap disajikan.</p>
+        </div>
+    </section>
+
+    <footer id="about">
+        <p>&copy; 2024 Favood. Semua Hak Dilindungi.</p>
+        <p>Dibuat dengan cinta untuk pecinta makanan di seluruh dunia.</p>
+    </footer>
+</body>
+</html>
