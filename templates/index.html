@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAVOOD</title>
+    <link rel="stylesheet" href="login.css"> <!-- Pastikan path CSS sesuai -->
 </head>
 <style>
     /* Gaya Umum */
@@ -82,6 +83,23 @@ nav a:hover {
 
 .search-box button:hover {
     background-color: #e65a50;
+}
+
+/* Tombol Tambah Resep Baru */
+.add-recipe {
+    margin-left: 10px;
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-recipe:hover {
+    background-color: #218838;
 }
 
 /* Resep */
@@ -163,9 +181,15 @@ footer p {
     </header>
 
     <div class="search-box" id="search">
+<<<<<<< HEAD:templates/index.html
         <input type="text" id="searchInput" placeholder="Search Your Favorite Recipe">
         <button onclick="searchRecipes()">Cari</button>
         
+=======
+        <input type="text" placeholder="Search Your Favorite Recipe">
+        <button>Cari</button>
+        <button class="add-recipe">Tambah Resep Baru</button>
+>>>>>>> abd9d6294d4198fcd26ba7cf925e99920d6050eb:templates/navbar.html
     </div>
     
     <script>
@@ -192,6 +216,9 @@ footer p {
     
     
     
+
+
+    <div id="recipes">
 
 
     <section id="recipes">
