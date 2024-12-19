@@ -1,10 +1,18 @@
-from flask import Flask, render_template, request, url_for
+from flask import Flask, request, render_template, redirect, url_for
+import os
+import traceback
 
-app = Flask(__name__)  
+# Konfigurasi Flask
+app = Flask(__name__)
 
+
+# Halaman utama
 @app.route('/')
-def navbar():
-    return render_template('navbar.html')
+def index():
+  
+    return render_template('index.html')
 
-if __name__ == '__main__':
+
+
+if __name__ == "__main__":
     app.run(debug=True)

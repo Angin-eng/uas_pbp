@@ -163,13 +163,40 @@ footer p {
     </header>
 
     <div class="search-box" id="search">
-        <input type="text" placeholder="Search Your Favorite Recipe">
-        <button>Cari</button>
+        <input type="text" id="searchInput" placeholder="Search Your Favorite Recipe">
+        <button onclick="searchRecipes()">Cari</button>
+        
     </div>
+    
+    <script>
+        function searchRecipes() {
+            // Ambil nilai input pencarian
+            const searchValue = document.getElementById("searchInput").value.toLowerCase();
+    
+            // Ambil semua elemen resep
+            const recipes = document.querySelectorAll(".recipe");
+    
+            // Loop melalui setiap resep
+            recipes.forEach(recipe => {
+                const recipeName = recipe.querySelector("h2").textContent.toLowerCase();
+                
+                // Cek apakah nama resep mengandung teks pencarian
+                if (recipeName.includes(searchValue)) {
+                    recipe.style.display = "block"; // Tampilkan resep jika cocok
+                } else {
+                    recipe.style.display = "none"; // Sembunyikan resep jika tidak cocok
+                }
+            });
+        }
+    </script>
+    
+    
+    
+
 
     <section id="recipes">
         <div class="recipe">
-            <img src="ayamsuwir.jpeg" alt="Ayam Suwir Sambal Matah">
+            <img src="static/images/ayamsuwir.jpeg" alt="Ayam Suwir Sambal Matah">
             <h2>Ayam Suwir Sambal Matah</h2>
             <h3>Bahan:</h3>
             <ul>
@@ -191,7 +218,7 @@ footer p {
         </div>
 
         <div class="recipe">
-            <img src="telurpenyet.jpg" alt="Telur Penyet">
+            <img src="static/images/telurpenyet.jpg" alt="Telur Penyet">
             <h2>Telur Penyet</h2>
             <h3>Bahan:</h3>
             <ul>
@@ -212,7 +239,7 @@ footer p {
         </div>
 
         <div class="recipe">
-            <img src="baksomercon.jpg" alt="Bakso Mercon">
+            <img src="static/images/baksomercon.jpg" alt="Bakso Mercon">
             <h2>Bakso Mercon</h2>
             <h3>Bahan:</h3>
             <ul>
@@ -237,7 +264,7 @@ footer p {
         </div>
 
         <div class="recipe">
-            <img src="osengkacang.jpg" alt="Oseng Kacang Panjang Tempe Kecap Pedas">
+            <img src="static/images/osengkacang.jpg" alt="Oseng Kacang Panjang Tempe Kecap Pedas">
             <h2>Oseng Kacang Panjang Tempe Kecap Pedas</h2>
             <h3>Bahan:</h3>
             <ul>
@@ -264,7 +291,7 @@ footer p {
         </div>
 
         <div class="recipe">
-            <img src="nasigoreng.jpg" alt="Nasi Goreng Spesial">
+            <img src="static/images/nasigoreng.jpg" alt="Nasi Goreng Spesial">
             <h2>Nasi Goreng Spesial</h2>
             <h3>Bahan:</h3>
             <ul>
@@ -295,7 +322,7 @@ footer p {
         </div>
 
         <div class="recipe">
-            <img src="tumisbuncis.jpg" alt="Tumis Buncis">
+            <img src="static/images/tumisbuncis.jpg" alt="Tumis Buncis">
             <h2>Tumis Buncis</h2>
             <h3>Bahan:</h3>
             <ul>
@@ -315,29 +342,54 @@ footer p {
         </div>
 
         <div class="recipe">
-            <img src="ayamgoreng.jpg" alt="Ayam Goreng Ketumbar">
-            <h2>Ayam Goreng Ketumbar</h2>
+            <img src="static/images/capcay.jpg" alt="Capcay Goreng">
+            <h2>Capcay</h2>
             <h3>Bahan:</h3>
             <ul>
-                <li>1 kg daging ayam (bersihkan, lalu potong-potong)</li>
-                <li>4 cm jahe (memarkan)</li>
-                <li>minyak goreng secukupnya air secukupnya</li>
+                <li>3 buah buncis (diiris serong)</li>
+                <li>1 bonggol bunga kol (potong per kuntum)</li>
+                <li>2 buah wortel (diiris serong)</li>
+                <li>1/2 sdt merica bubuk</li>
+                <li>kaldu bubuk secukupnya</li>
+                <li>3 siung bawang putih</li>
+                <li>minyak goreng secukupnya</li>
+                <li>air secukupnya</li>
+                
             </ul>
-            <h3>Bumbu halus:</h3>
-            <p>5 cm kunyit</p>
-            <p>2 sdt ketumbar</p>
-            <p>6 siung bawang putih</p>
-            <p>2 sdm kaldu ayam</p>
-            <p>gula pasir secukupnya</p>
-            <p>garam secukupnya</p>
             <h3>Cara membuat:</h3>
-            <p>1. Haluskan semua bahan bumbu halus menggunakan blender atau bisa diulek.</p>
-            <p>2. Panaskan minyak goreng, tumis bahan bumbu halus hingga harum. </p>
-            <p>3. Aduk-aduk terus sampai merata, lalu tuang sedikit air dan masak hingga air mendidih.</p>
-            <p>4. Masukkan satu per satu potongan daging ayam. Tutup dan ungkep daging ayam selama kurang lebih 20 menit. Jika sudah, angkat dan tiriskan.</p>
-            <p>5. Panaskan kembali minyak goreng yang banyak hingga mendidih, masukkan daging ayam yang sudah dibumbui dan goreng sampai berwarna kuning kecokelatan.</p>
-            <p>6. Angkat dan tiriskan. Ayam goreng bumbu ketumbar siap disajikan.</p>
+            <p>1. Haluskan bawang putih dan kemiri. Lalu, tumis sampai wangi.</p>
+            <p>2. Masukkan wortel dan kembang kol. Tambahkan sedikit air, lalu aduk merata. </p>
+            <p>3. Sebagai penambah rasa, beri merica dan kaldu bubuk. Aduk rata serta masak sampai wortel dan kembang kol layu.</p>
+            <p>4. Selanjutnya, masukkan buncis dan daun kembang kol. Masak sampai semua sayurannya empuk.</p>
+            <p>5. Koreksi rasa.</p>
+            <p>6. Angkat dan tiriskan. Capcay Goreng siap disajikan.</p>
         </div>
+        <div class="recipe">
+            <img src="static/images/semurtahutempe.jpg" alt="Semur Tahu Tempe">
+            <h2>Semur Tahu Tempe</h2>
+            <h3>Bahan:</h3>
+            <ul>
+                <li>1 kotak kecil tahu putih (dipotong-potong</li>
+                <li>1 papan tempe (dipotong-potong)</li>
+                <li>400 ml air</li>
+                <li>cabai rawit utuh secukupnya (sesuai selera)</li>
+                <li>gula, garam, lada, dan kecap manis secukupnya</li>
+                <li>6 siung bawang merah</li>
+                <li>3 siung bawang putih</li>
+                <li>4 butir kemiri</li>
+                
+            </ul>
+            <h3>Cara membuat:</h3>
+            <p>1. Goreng tahu dan tempe hingga setengah matang.</p>
+            <p>2. Haluskan bawang merah, bawang putih, kemiri. </p>
+            <p>3. Kemudian, tumis sampai layu dan baunya harum.</p>
+            <p>4. Selanjutnya, tuang air. Tambahkan pula gula, garam, lada, dan kecap manis. Aduk rata.</p>
+            <p>5. Masukkan tahu dan tempe goreng beserta beberapa buah cabai rawit utuh. Masak sampai airnya menyusut dan bumbu meresap.</p>
+            <p>6. Koreksi rasa, lalu sajikan.</p>
+        </div>
+
+
+
     </section>
 
     <footer id="about">
